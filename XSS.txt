@@ -1,0 +1,2 @@
+'"><svg/onload=alert('XSS')>
+'"><svg/onload=alert(/XSS/) a=

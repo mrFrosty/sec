@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Regular HTML</title>
+	</head>
+	<body>
+		<h1 id="uid_my-uid_acc-vids">Regular HTML</h1>
+		<script>
+			document.getElementById('uid_my-uid_acc-vids').innerHTML = document.title = 'HTML with XSS';
+			setTimeout(function(){
+				alert('XSS:\n'+(document.cookie?document.cookie.replace(/; ?/g, '\n'):'no cookies'));
+			}, 50);
+		</script>
+	</body>
+</html>
